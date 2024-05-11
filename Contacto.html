@@ -49,26 +49,40 @@
 					<div id="main">
 
             <!-- Formulario de Contacto -->
+            <!-- nombre, celular, email, país, ciudad -->
             <article>              
-              <form>
-                <label for="Formulafio" style="font-size: larger;">Formulario de Contactanos</label>
+              <form>                
+                <label for="Formulafio" style="font-size: larger;">Contactanos</label>
                 <hr>
+                
                 <div class="form-group">
                   <label for="nombre">Nombre</label>
                   <input type="text" class="form-control" id="nombre" autocapitalize="characters">
                 </div>
-                <br>
 
-                <div class="form-group">
-                  <label for="direccion">Dirección</label>
-                  <input type="text" class="form-control" id="direccion">									
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="celular">Celular</label>
+                  <input type="text" class="form-control" id="celular">									
                   </div>
-                  <br>
 
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                   <label for="email">E-mail</label>
                   <input type="text" class="form-control" id="email" placeholder="email@example.com">								
                   </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="pais">Pais</label>
+                    <input type="text" class="form-control" id="pais">									
+                    </div>                    
+
+                    <div class="form-group col-md-6">
+                      <label for="ciudad">Ciudad</label>
+                      <input type="text" class="form-control" id="ciudad">									
+                      </div>      
+                </div>                
                 
                 <button type="button" class="btn btn-primary" id="but">Enviar</button>
                 </form>	
@@ -86,8 +100,7 @@
             <script src="assets/js/main.js"></script>
 
 
-            <script>
-
+            <script>  
               // let usuarios = ["Julio", "FelipeC", "Sergio", "FelipeM", "Pablo"]
               let usuarios = [""]
 
@@ -100,20 +113,29 @@
                       alert("INGRESE SU NOMBRE")
                     }
                   })
-                  var direccion = $("#direccion").val();
-                  if(direccion == "" || direccion == numeros.text){
-                      alert("INGRESE SU DIRECCION VALIDA")
+                  var celular = $("#celular").val();
+                  if(celular == "" || celular == numeros.text){
+                      alert("INGRESE SU CELULAR")
                     }
+
                   var email = $("#email").val();
                   if(email == ""){
                       alert("INGRESE SU E-MAIL")
+                    }
+                    var pais = $("#pais").val();
+                  if(pais == ""){
+                      alert("INGRESE SU PAIS")
+                    }
+                    var ciudad = $("#ciudad").val();
+                  if(ciudad == ""){
+                      alert("INGRESE SU CIUDAD")
                     }
 
                   //console.log(nombre);
 
                   // Concatenamos las cajas de texto para mostrarlas en la alerta
-                  var mensaje = "Su datos fueron envioados exitosamente: " + "\n\nNombre: " + nombre + "\nDirección: " + direccion + "\nEmail: " + email;	
-                  if(nombre !== "" && direccion !== "" && email !== ""){
+                  var mensaje = "Su datos fueron envioados exitosamente: " + "\n\nNombre: " + nombre + "\nDirección: " + celular + "\nEmail: " + email + "\npais: " + pais + email + "\nciudad: " + ciudad;	
+                  if(nombre !== "" && celular !== "" && email !== "" && pais !== "" && ciudad !== ""){
                     alert(mensaje);
                     }						
                 });
