@@ -49,7 +49,7 @@
             
     <span style="padding-left: 40%;"></span>
 
-        <div id="clima" style="padding-left: 35%;"></div> 
+        <div class="row" id="clima" style="padding-left: 10%;"></div> 
 
             <!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -78,7 +78,7 @@
         $.ajax(settings).done(function (response) {
             console.log(response);
             $("#lugar").append("<h4>"+localidad+ "</h4><hr>");
-            for(let i=0; i<=10; i++){
+            for(let i=0; i<=11; i++){
             let datosClima = response.locations[localidad].values[i];
 
             $("#clima").append('<div class="card">'+
