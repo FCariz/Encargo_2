@@ -85,13 +85,12 @@
                 $.each(indicators, function(key, value) {
                     if(typeof value === 'object') {
                         var indicatorRow = $('<tr>');
-                          // Este if espara seleccionar algunos valores
                         if (value.codigo == 'dolar' || value.codigo == 'dolar_intercambio' || value.codigo == 'euro') {
-                        $('<td>').text(value.codigo).appendTo(indicatorRow);
-                        $('<td>').text(value.nombre).appendTo(indicatorRow);
-                        $('<td>').text(value.valor).appendTo(indicatorRow);
-                        indicatorsTable.append(indicatorRow);
-                      }//Fin del if
+                            $('<td>').text(value.codigo).appendTo(indicatorRow);
+                            $('<td>').text(value.nombre).appendTo(indicatorRow);
+                            $('<td>').text(value.valor).appendTo(indicatorRow);
+                            indicatorsTable.append(indicatorRow);
+                          }
                     }
                 });
             }).fail(function() {
