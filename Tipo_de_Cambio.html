@@ -48,12 +48,13 @@
       </div>
     </nav>     
   
+    <!-- Tipo de Cambio -->
     <div class="container mt-5">
-        <h1>Tipo de Cambio</h1>
+        <h1>Tipo de Cambio</h1><br>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Codigo</th>
+                    <th scope="col">Moneda</th>
                     <th scope="col">Indicador</th>
                     <th scope="col">Valor</th>
                 </tr>
@@ -84,12 +85,13 @@
                 $.each(indicators, function(key, value) {
                     if(typeof value === 'object') {
                         var indicatorRow = $('<tr>');
-                        if (value.codigo == 'dolar' || value.codigo == 'dolar_intercambio' || value.codigo == 'euro' || value.codigo == 'bitcoin') {
+                          // Este if espara seleccionar algunos valores
+                        if (value.codigo == 'dolar' || value.codigo == 'dolar_intercambio' || value.codigo == 'euro') {
                         $('<td>').text(value.codigo).appendTo(indicatorRow);
                         $('<td>').text(value.nombre).appendTo(indicatorRow);
                         $('<td>').text(value.valor).appendTo(indicatorRow);
                         indicatorsTable.append(indicatorRow);
-                      }
+                      }//Fin del if
                     }
                 });
             }).fail(function() {
