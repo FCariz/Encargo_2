@@ -12,11 +12,17 @@
     box-sizing: border-box;
   }
   
-  body {
+  body, html {
     background-image: url('fondo.jpg');
     display: grid;
     min-width: 100vh;
     grid-template-rows: auto 1fr auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    
   }
   
   .form-register {
